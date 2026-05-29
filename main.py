@@ -69,6 +69,15 @@ if __name__ == "__main__":
         num2 = float(input('Digite o segundo número: '))
         
         print("\nOperações disponíveis: +, -, *, /, ** (potência), % (resto)")
+        operador = input('Escolha o tipo de operação: ').strip()
+        
+        resultado = calculadora(num1, num2, operador)
+        
+        import math
+        if math.isnan(resultado):
+            print('Operação inválida! -> Tente novamente!')
+        else:
+            print(f'\nResultado: {resultado}')
 
 
         except ValueError:
