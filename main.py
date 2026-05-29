@@ -29,6 +29,13 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
             
     return result
 
+def calculadora_alternativa(num1: float, num2: float, operador: str) -> float:
+    
+    match operador:
+        case '+':
+            return num1 + num2
+        
+
 
 if __name__ == "__main__":
 
