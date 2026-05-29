@@ -10,7 +10,10 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     result = float("nan")
     if operador == '+':
         result = num1 + num2
-
+    elif operador == '-':
+        result = num1 - num2
+   
+            
     return result
 
 
@@ -31,4 +34,4 @@ if __name__ == "__main__":
             print('Impossível dividir por zero! -> Tente novamente!')
             time.sleep(2)
 
-    print('\nVolte sempre!\n')
+    print('\nVolte sempre!\n')  
