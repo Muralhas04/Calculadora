@@ -44,6 +44,8 @@ def calculadora_alternativa(num1: float, num2: float, operador: str) -> float:
             else:
                 print('Impossível dividir por zero!')
                 return float("nan")
+        case '**':
+            return num1 ** num2
         
 
 
