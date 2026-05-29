@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
-    
+
         print('Calculadora')
         print('----------------------------------\n')
             
