@@ -62,11 +62,11 @@ if __name__ == "__main__":
         print('----------------------------------\n')
             
 try:
-        num1 = float(input('Digite o primeiro número: '))
-        num2 = float(input('Digite o segundo número: '))
-        
-        print("\nOperações disponíveis: +, -, *, /, ** (potência), % (resto)")
-        operador = input('Escolha o tipo de operação: ').strip()
+            num1 = float(input('Digite o primeiro número: '))
+            num2 = float(input('Digite o segundo número: '))
+            
+            print("\nOperações disponíveis: +, -, *, /, ** (potência), % (resto)")
+            operador = input('Escolha o tipo de operação: ').strip()
         
         resultado = calculadora(num1, num2, operador)
         
