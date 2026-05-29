@@ -30,7 +30,6 @@ result = float("nan")
     return result
 
 def calculadora_alternativa(num1: float, num2: float, operador: str) -> float:
-    
     match operador:
         case '+':
             return num1 + num2
@@ -42,20 +41,18 @@ def calculadora_alternativa(num1: float, num2: float, operador: str) -> float:
             if num2 != 0:
                 return num1 / num2
             else:
-                print('Impossível dividir por zero!')
-                return float("nan")
+                raise ZeroDivisionError
         case '**':
             return num1 ** num2
         case '%':
             if num2 != 0:
                 return num1 % num2
             else:
-                print('Impossível dividir por zero!')
-            
-                return float("nan")
+                raise ZeroDivisionError
+        case _:
+            return float("nan")
         
-
-
+        
 if __name__ == "__main__":
 
     while True:
