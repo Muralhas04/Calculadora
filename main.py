@@ -1,5 +1,6 @@
 import os
 import time
+import math
 
 def calculadora(num1: float, num2: float, operador: str) -> float:
     """
