@@ -68,24 +68,24 @@ try:
             print("\nOperações disponíveis: +, -, *, /, ** (potência), % (resto)")
             operador = input('Escolha o tipo de operação: ').strip()
         
-        resultado = calculadora(num1, num2, operador)
-        
-        import math
-        if math.isnan(resultado):
-            print('Operação inválida! -> Tente novamente!')
-        else:
-            print(f'\nResultado: {resultado}')
+resultado = calculadora(num1, num2, operador)
             
-            
+            if math.isnan(resultado):
+                print('\nOperação inválida! -> Tente novamente!')
+                time.sleep(2)
+                continue
+            else:
+                print(f'\nResultado: {resultado}')
+                
         except ValueError:
-        print('Dados inválidos! -> Tente novamente!')
-        time.sleep(2)
-        continue
+            print('\nDados inválidos! -> Tente novamente!')
+            time.sleep(2)
+            continue
 
         except ZeroDivisionError:
-        print('Impossível dividir por zero! -> Tente novamente!')
-        time.sleep(2)
-        continue
+            print('\nImpossível dividir por zero! -> Tente novamente!')
+            time.sleep(2)
+            continue
 
         input('\n----------------------------------')  
         resposta = input('Deseja realizar outra operação? (s/n): ').strip().lower()
