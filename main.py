@@ -51,6 +51,7 @@ def calculadora_alternativa(num1: float, num2: float, operador: str) -> float:
                 return num1 % num2
             else:
                 print('Impossível dividir por zero!')
+            
                 return float("nan")
         
 
@@ -59,9 +60,15 @@ if __name__ == "__main__":
 
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
-        try:
+
             print('Calculadora')
             print('----------------------------------\n')
+            
+    try:
+        num1 = float(input('Digite o primeiro número: '))
+        num2 = float(input('Digite o segundo número: '))
+        
+        print("\nOperações disponíveis: +, -, *, /, ** (potência), % (resto)")
 
 
         except ValueError:
