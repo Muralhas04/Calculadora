@@ -34,6 +34,8 @@ def calculadora_alternativa(num1: float, num2: float, operador: str) -> float:
     match operador:
         case '+':
             return num1 + num2
+        case '-':
+            return num1 - num2
         
 
 
