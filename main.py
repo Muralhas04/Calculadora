@@ -7,7 +7,7 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     Se o operador fornecido não corresponder a nenhuma das opções válidas (+, -, etc.), a função retornará nan, 
     sinalizando que o cálculo não pôde ser realizado.
     """
-    result = float("nan")
+result = float("nan")
     if operador == '+':
         result = num1 + num2
     elif operador == '-':
@@ -18,14 +18,14 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
         if num2 != 0:
             result = num1 / num2
         else:
-            print('Impossível dividir por zero!')
+            raise ZeroDivisionError
     elif operador == '**':
         result = num1 ** num2
     elif operador == '%':
         if num2 != 0:
             result = num1 % num2
         else:
-            print('Impossível dividir por zero!')
+            raise ZeroDivisionError
             
     return result
 
@@ -60,11 +60,11 @@ if __name__ == "__main__":
 
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
-
+    
         print('Calculadora')
         print('----------------------------------\n')
             
-    try:
+try:
         num1 = float(input('Digite o primeiro número: '))
         num2 = float(input('Digite o segundo número: '))
         
@@ -94,4 +94,4 @@ if __name__ == "__main__":
         resposta = input('Deseja realizar outra operação? (s/n): ').strip().lower()
         if resposta != 's':
             print('Encerrando a calculadora. Até mais!')
-            break
+    break
