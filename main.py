@@ -87,8 +87,9 @@ resultado = calculadora(num1, num2, operador)
             time.sleep(2)
             continue
 
-        input('\n----------------------------------')  
+print('\n----------------------------------')  
         resposta = input('Deseja realizar outra operação? (s/n): ').strip().lower()
         if resposta != 's':
             print('Encerrando a calculadora. Até mais!')
-    break
+            time.sleep(1)
+            break
