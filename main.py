@@ -61,8 +61,8 @@ if __name__ == "__main__":
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
 
-            print('Calculadora')
-            print('----------------------------------\n')
+        print('Calculadora')
+        print('----------------------------------\n')
             
     try:
         num1 = float(input('Digite o primeiro número: '))
@@ -78,14 +78,20 @@ if __name__ == "__main__":
             print('Operação inválida! -> Tente novamente!')
         else:
             print(f'\nResultado: {resultado}')
-
-
+            
+            
         except ValueError:
-            print('Dados inválidos! -> Tente novamente!')
-            time.sleep(2)
+        print('Dados inválidos! -> Tente novamente!')
+        time.sleep(2)
+        continue
 
         except ZeroDivisionError:
-            print('Impossível dividir por zero! -> Tente novamente!')
-            time.sleep(2)
+        print('Impossível dividir por zero! -> Tente novamente!')
+        time.sleep(2)
+        continue
 
-    print('\nVolte sempre!\n')  
+        input('\n----------------------------------')  
+        resposta = input('Deseja realizar outra operação? (s/n): ').strip().lower()
+        if resposta != 's':
+            print('Encerrando a calculadora. Até mais!')
+            break
